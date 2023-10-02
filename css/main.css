@@ -1,8 +1,9 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: rgb(215, 213, 213);
   margin: 0;
   padding: 0;
+  color: #201f1f;
 }
 
 h1,
@@ -12,6 +13,7 @@ h4,
 h5,
 h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  color: #030303;
 }
 
 .container {
@@ -24,7 +26,7 @@ img {
   width: 100%;
 }
 
-.main-nav ul {
+nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -32,12 +34,12 @@ img {
   padding: 0;
 }
 
-.main-nav ul li {
+nav li {
   flex: 1;
   text-align: center;
 }
 
-.main-nav ul li a {
+nav a {
   display: block;
   color: inherit;
   text-decoration: none;
@@ -50,6 +52,14 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #333;
 }
 
 form textarea {
@@ -61,11 +71,38 @@ form textarea {
 
 form button {
   background: none;
-  border: 2px solid black;
+  border: 2px solid rgb(0, 0, 0);
   padding: 1rem;
   text-transform: uppercase;
+  border-radius: 3px;
+  
+}
+
+.skippy {
+  position: absolute;
+  clip: rect(0,0,0,0);
+}
+
+.skippy:focus {
+  position: static;
+  background-color: #555;
+  clip: auto;
+  color: #fff;
+}
+.skippy:hover {
+  background: #333;
 }
 
 .site-footer {
   padding: 2rem 0;
+  background-color: #333;
+  color: #fff;
+}
+
+a[href^="mailto:"] {
+  color: black;
+}
+
+a[href^="tel:"] {
+  color: black;
 }
